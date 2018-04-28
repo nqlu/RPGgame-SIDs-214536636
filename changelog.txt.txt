@@ -1,0 +1,16 @@
+Milestone1 : Player movement and player amination 6days ( 1ours / day ) total 6hours
+1st April : Create project with character
+2nd April : Create detail of character
+4th April : Create character movement
+7th April : Create character animation movement
+8th April : Create character animation movement
+Milstone 2 : Create map
+9th April : Update map
+14th April : Fix Camera
+15th APril : update map
+17th APril : add more collision in map
+19th April : fix map
+20th April fix map
+MIlstone3 : create enemy
+22th April : Making Github again with following instruction. Create kill enemy
+23th 24 April : Create UI Feature
