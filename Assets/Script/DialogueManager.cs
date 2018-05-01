@@ -7,15 +7,17 @@ public class DialogueManager : MonoBehaviour {
     public Text dText;
     public bool dialogActive;
     public string[] diaglogLines;
-    public int currentLine; 
+    public int currentLine;
+    private PlayerController thePlayer;
 	// Use this for initialization
 	void Start () {
-		
+        thePlayer = FindObjectOfType<PlayerController>();
+    
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if(dialogActive && Input.GetKeyDown(KeyCode.Space))
+		if(dialogActive && Input.GetKeyDown(KeyCode.Mouse0))
         {
             // dBox.SetActive(false);
             // dialogActive = false;
@@ -26,6 +28,7 @@ public class DialogueManager : MonoBehaviour {
             dBox.SetActive(false);
              dialogActive = false;
             currentLine = 0;
+            thePlayer.canMove = true;
         }
         dText.text = diaglogLines[currentLine];
     }
@@ -40,6 +43,7 @@ public class DialogueManager : MonoBehaviour {
     {
         dialogActive = true;
         dBox.SetActive(true);
+        thePlayer.canMove = false;
 
     }
 }

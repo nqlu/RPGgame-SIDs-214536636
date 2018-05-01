@@ -19,7 +19,7 @@ public class DialogueHolder : MonoBehaviour {
     {
         if(other.gameObject.name == "Player")
         {
-            if(Input.GetKeyUp(KeyCode.Space))
+            if(Input.GetKeyUp(KeyCode.Mouse0))
             {
                 //dMAn.ShowBox(dialogue);
                 if(!dMAn.dialogActive)
@@ -27,6 +27,10 @@ public class DialogueHolder : MonoBehaviour {
                     dMAn.diaglogLines = dialogueLines;
                     dMAn.currentLine = 0;
                     dMAn.showDialogue();
+                }
+                if(transform.parent.GetComponent<Villagemovement>() != null)
+                {
+                    transform.parent.GetComponent<Villagemovement>().canMove = false;
                 }
             }
         }
